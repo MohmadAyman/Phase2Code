@@ -166,6 +166,7 @@
     <ClCompile Include="GUI\Input.cpp" />
     <ClCompile Include="GUI\Output.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Select.cpp" />
     <ClCompile Include="Statements\Connector.cpp" />
     <ClCompile Include="Statements\SmplAssign.cpp" />
     <ClCompile Include="Statements\Statement.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="GUI\Input.h" />
     <ClInclude Include="GUI\Output.h" />
     <ClInclude Include="GUI\UI_Info.h" />
+    <ClInclude Include="Select.h" />
     <ClInclude Include="Statements\Connector.h" />
     <ClInclude Include="Statements\SmplAssign.h" />
     <ClInclude Include="Statements\Statement.h" />
