@@ -11,4 +11,3 @@ void Statement::SetSelected(bool s)
 
 bool Statement::IsSelected() const
 {	return Selected; }
-

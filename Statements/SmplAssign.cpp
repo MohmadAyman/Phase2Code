@@ -38,9 +38,7 @@ void SmplAssign::Draw(Output* pOut) const
 {
 	//Call Output::DrawAssign function to draw assignment statement 	
 	pOut->DrawAssign(LeftCorner, UI.ASSGN_WDTH, UI.ASSGN_HI, Text, Selected);
-	
 }
-
 
 //This function should be called when LHS or RHS changes
 void SmplAssign::UpdateStatementText()

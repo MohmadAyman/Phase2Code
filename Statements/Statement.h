@@ -23,7 +23,6 @@ public:
 	Statement();
 	void SetSelected(bool s);
 	bool IsSelected() const;
-
 	virtual void Draw(Output* pOut) const  = 0 ;	//Draw the statement
 	
 	
@@ -47,6 +46,7 @@ public:
 	//virtual void PrintInfo(Output* pOut) = 0;	//print all Statement info on the status bar
 	
 	///TODO: Add more functions if needed
+	virtual Point GetPoint() const = 0;
 };
 
 #endif

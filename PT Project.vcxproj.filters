@@ -148,7 +148,7 @@
       <Filter>Statements</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Select.cpp">
+    <ClCompile Include="Actions\Select.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -241,7 +241,7 @@
       <Filter>Statements</Filter>
     </ClInclude>
     <ClInclude Include="DEFS.h" />
-    <ClInclude Include="Select.h">
+    <ClInclude Include="Actions\Select.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>
