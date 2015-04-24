@@ -27,7 +27,14 @@ void Move::Execute()
 	Input *pIn = pManager->GetInput();
 	Output *pOut = pManager->GetOutput();
 	pIn->GetPointClicked(Position);
+	while (buttonstate() == 1)
+	{
+		Statement *s;
+		Statement *sel;
+		s=pManager->GetSelectedStatement();
+		sel = s;
 
+	}
 }
 Move::~Move()
 {}
