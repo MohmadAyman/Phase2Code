@@ -12,6 +12,10 @@ void Input::GetPointClicked(Point &P) const
 	pWind->WaitMouseClick(P.x, P.y);	//Wait for mouse click
 }
 
+bool Input::ButtonState()
+{
+	return buttonstate();
+}
 
 string Input::GetString(Output *pO) const 
 {

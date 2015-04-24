@@ -37,7 +37,6 @@ void AddSmplAssign::Execute()
 	Corner.y = Position.y ;
 	
 	SmplAssign *pAssign = new SmplAssign(Corner, "", 0);
-
 	pManager->AddStatement(pAssign);
 }
 

@@ -164,9 +164,11 @@
     <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
     <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
     <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
+    <ClCompile Include="Delete.cpp" />
     <ClCompile Include="GUI\Input.cpp" />
     <ClCompile Include="GUI\Output.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Move.cpp" />
     <ClCompile Include="Statements\Connector.cpp" />
     <ClCompile Include="Statements\SmplAssign.cpp" />
     <ClCompile Include="Statements\Statement.cpp" />
@@ -197,9 +199,11 @@
     <ClInclude Include="CMUgraphicsLib\version.h" />
     <ClInclude Include="CMUgraphicsLib\windowinput.h" />
     <ClInclude Include="DEFS.h" />
+    <ClInclude Include="Delete.h" />
     <ClInclude Include="GUI\Input.h" />
     <ClInclude Include="GUI\Output.h" />
     <ClInclude Include="GUI\UI_Info.h" />
+    <ClInclude Include="Move.h" />
     <ClInclude Include="Statements\Connector.h" />
     <ClInclude Include="Statements\SmplAssign.h" />
     <ClInclude Include="Statements\Statement.h" />

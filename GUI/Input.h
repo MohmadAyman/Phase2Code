@@ -19,6 +19,7 @@ public:
 	string GetString(Output* pO) const ; //Returns a string entered by the user
 
 	ActionType GetUserAction() const; //Read the user click and map it to an action
+	bool ButtonState();
 
 	~Input();
 };

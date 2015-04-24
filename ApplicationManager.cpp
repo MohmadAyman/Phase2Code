@@ -51,6 +51,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			///create Select Action her
 			pAct = new Select(this);
 			break;
+	//	case Move:
+		//	pAct = new Move(this);
+			//break;
 
 		case EXIT:
 			///create Exit Action here
@@ -76,7 +79,14 @@ void ApplicationManager::AddStatement(Statement *pStat)
 {
 	if(StatCount < MaxCount)
 		StatList[StatCount++] = pStat;
-	
+}
+void ApplicationManager::DeleteStatement(Statement* p) {
+	for (int i = 0; i<MaxCount; i++)
+		if (StatList[i] = p) {
+			StatList[i] = StatList[StatCount-1];
+			StatList[StatCount - 1] = nullptr;
+			StatCount--;
+		}
 }
 ////////////////////////////////////////////////////////////////////////////////////
 Statement *ApplicationManager::GetStatement(Point P) const

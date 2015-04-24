@@ -59,3 +59,12 @@ bool SmplAssign::Within(Point p) const {
 		return true;
 	return false;
 }
+void SmplAssign::Move() {
+	while (buttonstate() == 1) {
+		
+
+	}
+}
+void SmplAssign::Delete() {
+	
+}

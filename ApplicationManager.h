@@ -34,7 +34,7 @@ public:
 	// -- Statements/Connector Management Functions
 	void AddStatement(Statement* pStat); //Adds a new Statement to the Flowchart
 	Statement *GetStatement(Point P) const;	//search for a statement where point P belongs
-
+	void DeleteStatement(Statement*);
 	void AddConnector(Connector* pConn); //Adds a new Connector to the Flowchart
 	Connector *GetConnector(Point P) const;	//search for a Connector where point P belongs
 

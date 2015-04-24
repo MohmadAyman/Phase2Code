@@ -36,9 +36,8 @@ public:
 	//virtual void Load(ifstream &Infile) = 0;	//Load the Statement parameters from a file
 
 
-	//virtual void Move() = 0;		//Move the Statement on the flowchart
+	virtual void Move() = 0;		//Move the Statement on the flowchart
 	//virtual void Edit() = 0;		//Edit the Statement parameter
-
 	//virtual void GenerateCode(ofstream &OutFile) = 0;	//write the statement code to a file
 	//virtual void Simulate();	//Execute the statement in the simulation mode
 
