@@ -36,7 +36,8 @@ void SmplAssign::setRHS(double R)
 
 void SmplAssign::Draw(Output* pOut) const
 {
-	//Call Output::DrawAssign function to draw assignment statement 	
+	//Call Output::DrawAssign function to draw assignment statement 
+
 	pOut->DrawAssign(LeftCorner, UI.ASSGN_WDTH, UI.ASSGN_HI, Text, Selected);
 }
 
@@ -52,4 +53,9 @@ void SmplAssign::UpdateStatementText()
 		T<<LHS<<" = "<<RHS;	
 		Text = T.str();	 
 	}
+}
+bool SmplAssign::Within(Point p) const {
+	if ((LeftCorner.x < p.x < LeftCorner.x + UI.ASSGN_WDTH) && (LeftCorner.y < p.y < LeftCorner.y + UI.ASSGN_HI))
+		return true;
+	return false;
 }

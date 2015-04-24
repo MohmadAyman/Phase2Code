@@ -25,7 +25,7 @@ public:
 	
 	void setLHS(const string &L);
 	void setRHS(double R);
-
+	bool Within(Point) const;
 	virtual void Draw(Output* pOut) const;
 
 	

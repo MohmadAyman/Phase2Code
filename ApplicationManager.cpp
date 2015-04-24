@@ -21,7 +21,6 @@ ApplicationManager::ApplicationManager()
 		ConnList[i] = NULL;
 	}
 }
-
 //==================================================================================//
 //								Actions Related Functions							//
 //==================================================================================//
@@ -69,9 +68,6 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		delete pAct;	//Action is not needed any more ==> delete it
 	}
 }
-
-
-
 //==================================================================================//
 //						Statements Management Functions								//
 //==================================================================================//
@@ -82,7 +78,6 @@ void ApplicationManager::AddStatement(Statement *pStat)
 		StatList[StatCount++] = pStat;
 	
 }
-
 ////////////////////////////////////////////////////////////////////////////////////
 Statement *ApplicationManager::GetStatement(Point P) const
 {
@@ -90,7 +85,7 @@ Statement *ApplicationManager::GetStatement(Point P) const
 	//otherwise, return NULL
 	for (int i = 0; i<MaxCount; i++)
 	{
-		if (StatList[i]->GetPoint()==P)
+		if (StatList[i]->Within(P))
 		{
 			return StatList[i];
 		}
@@ -109,8 +104,6 @@ Statement *ApplicationManager::GetSelectedStatement() const
 //Set the statement selected by the user
 void ApplicationManager::SetSelectedStatement(Statement *pStat)
 {	pSelectedStat = pStat;	}
-
-
 //==================================================================================//
 //							Interface Management Functions							//
 //==================================================================================//
@@ -135,8 +128,6 @@ Input *ApplicationManager::GetInput() const
 Output *ApplicationManager::GetOutput() const
 {	return pOut; }
 ////////////////////////////////////////////////////////////////////////////////////
-
-
 //Destructor
 ApplicationManager::~ApplicationManager()
 {
