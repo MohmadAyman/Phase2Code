@@ -67,7 +67,7 @@ ActionType Input::GetUserAction() const
 			if( x >= 0 && x < UI.MnItWdth  )
 				return ADD_SMPL_ASSIGN;
 			if( x >= UI.MnItWdth && x < 2* UI.MnItWdth  )		
-				return ADD_CONDITION;
+				return DEL;
 			if( x >= UI.MnItWdth && x < 3* UI.MnItWdth  )		
 				return EXIT;
 

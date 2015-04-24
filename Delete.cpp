@@ -15,16 +15,22 @@ void Delete::ReadActionParameters()
 	Input *pIn = pManager->GetInput();
 	Output *pOut = pManager->GetOutput();
 
-	pOut->PrintMessage("you are moving an object");
+	pOut->PrintMessage("you are now delted sth");
 
 	pIn->GetPointClicked(Position);
 	pOut->ClearStatusBar();
 }
 void Delete::Execute()
 {
+	ReadActionParameters();
 	Input *pIn = pManager->GetInput();
 	Output *pOut = pManager->GetOutput();
 	pIn->GetPointClicked(Position);
-	Statement *s = pManager->GetStatement(Position);
-	pManager->DeleteStatement(s);
+	Statement *sel = pManager->GetSelectedStatement();
+	if (sel != NULL)
+	{
+		pManager->DeleteStatement(sel);
+		pOut->PrintMessage("you deleted an object");
+		pOut->ClearDrawArea();
+	}
 }
