@@ -157,6 +157,9 @@
     <ClCompile Include="Delete.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
+    <ClCompile Include="Edit.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -254,6 +257,9 @@
       <Filter>Action Classes</Filter>
     </ClInclude>
     <ClInclude Include="Delete.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Edit.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>

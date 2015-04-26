@@ -22,15 +22,15 @@ private:
 	//Pointers to Input and Output classes
 	Input *pIn;
 	Output *pOut;
-public:	
-	ApplicationManager(); 
+public:
+	ApplicationManager();
 	~ApplicationManager();
-	
+
 	// -- Actions Related Functions
 	//Reads the input command from the user and returns the corresponding action type
 	ActionType GetUserAction() const;
 	void ExecuteAction(ActionType) ; //Creates an action and executes it
-	
+
 	// -- Statements/Connector Management Functions
 	void AddStatement(Statement* pStat); //Adds a new Statement to the Flowchart
 	Statement *GetStatement(Point P) const;	//search for a statement where point P belongs
@@ -42,7 +42,7 @@ public:
 	Statement *GetSelectedStatement() const;	//Returns the selected Statement
 	void SetSelectedStatement(Statement *pStat); //Set the Statement selected by the user
 
-		
+
 	// -- Interface Management Functions
 	Input *GetInput() const; //Return pointer to the input
 	Output *GetOutput() const; //Return pointer to the output

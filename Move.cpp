@@ -19,7 +19,6 @@ void Move::ReadActionParameters()
 	pIn->GetPointClicked(Position);
 	pOut->ClearStatusBar();
 }
-
 void Move::Execute()
 {
 	ReadActionParameters();
@@ -33,7 +32,9 @@ void Move::Execute()
 		Statement *sel;
 		s=pManager->GetSelectedStatement();
 		sel = s;
-
+		
+		pManager->DeleteStatement(s);
+		sel->Draw(pOut);
 	}
 }
 Move::~Move()
