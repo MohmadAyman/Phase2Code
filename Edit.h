@@ -7,7 +7,7 @@ class Edit :
 	public Action
 {
 public:
-	Edit();
+	Edit(ApplicationManager*);
 	~Edit();
 };
 

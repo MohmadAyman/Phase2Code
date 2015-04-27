@@ -19,7 +19,8 @@ struct UI_Info	//User Interface Info.
 
 	int StBrWdth;		//Status Bar Width
 	int TlBrWdth;		//Tool Bar Width
-	int MnItWdth;		//Menu Item Width
+	int MnItWdth;       //Menu Item Width
+	int SmItWdth;
 	
 	color DrawClr;		//Drawing color
 	color HiClr;		//Highlighting color
@@ -27,6 +28,8 @@ struct UI_Info	//User Interface Info.
 
 	int ASSGN_WDTH;		//Assignment statement default width
 	int ASSGN_HI;		//Assignment statement default height
+	int COND_WDTH;      // Condition statement default width
+	int COND_HI;        // Condition statement default height
 	
 }UI;	//create a single global object UI
 

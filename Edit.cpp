@@ -1,7 +1,7 @@
 #include "Edit.h"
 
 
-Edit::Edit()
+Edit::Edit(ApplicationManager *pAppManager) :Action(pAppManager)
 {}
 
 

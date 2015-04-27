@@ -43,12 +43,12 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new AddSmplAssign(this);
 			break;
 
-		case ADD_CONDITION:
+		case ADD_END:
 			///create AddCondition Action here
 
 			break;
 
-		case SELECT:
+		case ADD_SELECT:
 			///create Select Action her
 			pAct = new Select(this);
 			break;
