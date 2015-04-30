@@ -1,8 +1,8 @@
 #include "Delete.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\Actions\Action.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\ApplicationManager.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\input.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\Output.h"
+#include "Action.h"
+#include "ApplicationManager.h"
+#include "input.h"
+#include "Output.h"
 
 Delete::Delete(ApplicationManager*pAppManager) :Action(pAppManager)
 {}
