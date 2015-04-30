@@ -262,6 +262,9 @@
     <ClInclude Include="Edit.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Action Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

@@ -205,6 +205,7 @@
     <ClInclude Include="GUI\Input.h" />
     <ClInclude Include="GUI\Output.h" />
     <ClInclude Include="GUI\UI_Info.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Statements\Connector.h" />
     <ClInclude Include="Statements\SmplAssign.h" />
