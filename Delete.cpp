@@ -3,7 +3,7 @@
 #include "ApplicationManager.h"
 #include "input.h"
 #include "Output.h"
-
+//test
 Delete::Delete(ApplicationManager*pAppManager) :Action(pAppManager)
 {}
 
