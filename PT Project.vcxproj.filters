@@ -160,7 +160,6 @@
     <ClCompile Include="Edit.cpp">
       <Filter>Action Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Header2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -263,10 +262,6 @@
     <ClInclude Include="Edit.h">
       <Filter>Action Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Action Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Header2.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

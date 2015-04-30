@@ -1,6 +1,6 @@
 #include "ApplicationManager.h"
 
-
+//test
 int main()
 {
 	ActionType ActType;
