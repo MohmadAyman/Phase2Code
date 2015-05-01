@@ -4,6 +4,8 @@
 #include "GUI\Output.h"
 #include "Actions\Select.h"
 #include "Delete.h"
+#include "Edit.h"
+#include "MultiSelect.h"
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -55,7 +57,13 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 	//	case Move:
 		//	pAct = new Move(this);
 			//break;
+		case EDIT:
+			pAct = new Edit(this);
+			break;
 
+		case MULTI_SELECT:
+			pAct = new MultiSelect(this);
+			break;
 		case DEL:
 			///create Exit Action here
 			pAct = new Delete(this);
@@ -81,12 +89,18 @@ void ApplicationManager::AddStatement(Statement *pStat)
 	if(StatCount < MaxCount)
 		StatList[StatCount++] = pStat;
 }
+/////////////////////////////////////////////////////////////////////////////////////
 void ApplicationManager::DeleteStatement(Statement* p) {
 	for (int i = 0; i<MaxCount; i++)
-		if (StatList[i] = p) {
+		if (StatList[i] == p) {
+
 			StatList[i] = StatList[StatCount-1];
-			StatList[StatCount - 1] = nullptr;
+
+			StatList[StatCount-1] = nullptr;
+
 			StatCount--;
+
+			break;
 		}
 }
 ////////////////////////////////////////////////////////////////////////////////////

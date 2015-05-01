@@ -1,13 +1,18 @@
 #pragma once
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\Actions\Action.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\ApplicationManager.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\input.h"
-#include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\Output.h"
+#include "Actions\Action.h"
+#include "ApplicationManager.h"
+#include "GUI\input.h"
+#include "GUI\Output.h"
+
+/// Class Edit body is still empty //////////////////////////////
 class Edit :
 	public Action
 {
+	Point Position;
 public:
 	Edit(ApplicationManager*);
 	~Edit();
+	void ReadActionParameters();
+	void Execute();
 };
 

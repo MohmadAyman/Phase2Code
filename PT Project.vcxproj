@@ -170,6 +170,7 @@
     <ClCompile Include="GUI\Output.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Move.cpp" />
+    <ClCompile Include="MultiSelect.cpp" />
     <ClCompile Include="Statements\Connector.cpp" />
     <ClCompile Include="Statements\SmplAssign.cpp" />
     <ClCompile Include="Statements\Statement.cpp" />
@@ -206,6 +207,7 @@
     <ClInclude Include="GUI\Output.h" />
     <ClInclude Include="GUI\UI_Info.h" />
     <ClInclude Include="Move.h" />
+    <ClInclude Include="MultiSelect.h" />
     <ClInclude Include="Statements\Connector.h" />
     <ClInclude Include="Statements\SmplAssign.h" />
     <ClInclude Include="Statements\Statement.h" />

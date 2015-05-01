@@ -28,7 +28,6 @@ void Select::Execute()
 	Statement *s=pManager->GetStatement(Position);
 	if (s != nullptr)
 	{
-
 		if (s->IsSelected() != true)
 		{
 			pManager->SetSelectedStatement(s);

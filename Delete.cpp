@@ -12,22 +12,13 @@ Delete::~Delete()
 {}
 void Delete::ReadActionParameters()
 {
-	Input *pIn = pManager->GetInput();
-	Output *pOut = pManager->GetOutput();
-
-	pOut->PrintMessage("you are now delted sth");
-
-	pIn->GetPointClicked(Position);
-	pOut->ClearStatusBar();
 }
 void Delete::Execute()
 {
-	ReadActionParameters();
-	Input *pIn = pManager->GetInput();
-	Output *pOut = pManager->GetOutput();
-	pIn->GetPointClicked(Position);
+	Output *pOut = pManager->GetOutput();	
 	Statement *sel = pManager->GetSelectedStatement();
-	if (sel != NULL)
+
+	if (sel != NULL && sel->IsSelected())
 	{
 		pManager->DeleteStatement(sel);
 		pOut->PrintMessage("you deleted an object");
