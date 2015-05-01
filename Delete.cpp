@@ -1,8 +1,8 @@
 #include "Delete.h"
-#include "Action.h"
+#include "Actions/Action.h"
 #include "ApplicationManager.h"
-#include "input.h"
-#include "Output.h"
+#include "GUI/input.h"
+#include "GUI/Output.h"
 
 Delete::Delete(ApplicationManager*pAppManager) :Action(pAppManager)
 {}

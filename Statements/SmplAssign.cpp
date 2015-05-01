@@ -55,7 +55,8 @@ void SmplAssign::UpdateStatementText()
 	}
 }
 bool SmplAssign::Within(Point p) const {
-	if ((LeftCorner.x < p.x < LeftCorner.x + UI.ASSGN_WDTH) && (LeftCorner.y < p.y < LeftCorner.y + UI.ASSGN_HI))
+	if (LeftCorner.x < p.x  && p.x < (LeftCorner.x + UI.ASSGN_WDTH) && 
+		LeftCorner.y < p.y && p.y < (LeftCorner.y + UI.ASSGN_HI))
 		return true;
 	return false;
 }
