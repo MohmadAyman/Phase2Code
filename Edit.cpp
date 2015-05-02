@@ -20,6 +20,11 @@ void Edit::ReadActionParameters()
 void Edit::Execute()
 {
 	ReadActionParameters();
-
-
+	Input *pIn = pManager->GetInput();
+	Output *pOut = pManager->GetOutput();
+	pIn->GetPointClicked(Position);
+    Statement *s;
+	s=pManager->GetStatement(Position);
+	if (s!=nullptr)
+		s->Edit(pIn,pOut);
 }

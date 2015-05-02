@@ -70,3 +70,10 @@ void SmplAssign::Move() {
 void SmplAssign::Delete() {
 	
 }
+void SmplAssign::Edit(Input*pIn, Output*pOut)
+{
+	pOut->PrintMessage("Edit Simple Assignment Statement");
+	LHS = pIn->GetString(pOut);
+	RHS = pIn->GetValue(pOut);
+	UpdateStatementText();
+}
