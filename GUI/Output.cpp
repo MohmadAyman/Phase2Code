@@ -39,6 +39,67 @@ Output::Output()
 CreateStatusBar();
 }
 
+void Output::Dragging(Point Postion)
+{
+
+	int iX, iY;
+	/*pWind->FlushMouseQueue();
+	pWind->FlushKeyQueue();
+
+	pWind->SetFont(20, BOLD, BY_NAME, "Arial");
+
+	pWind->SetBuffering(true);
+
+	*/
+	int RectULX = 100;
+	int RectULY = 100;
+	int RectWidth = 20;
+	bool bDragging = false;
+	iX = Postion.x;
+	iY = Postion.y;
+	int iXOld = Postion.x;
+	int iYOld = Postion.y;
+	char cKeyData;
+	// Loop until there escape is pressed
+	while (pWind->GetKeyPress(cKeyData) != ESCAPE)
+	{
+		pWind->SetPen(BLACK);
+		pWind->SetBrush(BLACK);
+		pWind->DrawRectangle(60,0, RectULX, RectULY);
+		// Dragging voodoo
+		if (bDragging == false)
+		{
+			if (pWind->GetButtonState(LEFT_BUTTON, iX, iY) == BUTTON_DOWN)
+			{
+				if (((iX > RectULX) && (iX < (RectULX + RectWidth))) && ((iY > RectULY) && (iY < (RectULY + RectWidth))))
+				{
+					bDragging = true;
+					iXOld = iX; iYOld = iY;
+				}
+			}
+		}
+		else
+		{
+			if (pWind->GetButtonState(LEFT_BUTTON, iX, iY) == BUTTON_UP)
+			{
+				bDragging = false;
+			}
+			else
+			{
+				if (iX != iXOld)
+				{
+					RectULX = RectULX + (iX - iXOld);
+					iXOld = iX;
+				}
+				if (iY != iYOld)
+				{
+					RectULY = RectULY + (iY - iYOld);
+					iYOld = iY;
+				}
+			}
+		}
+	}
+}
 
 Input* Output::CreateInput()
 {
@@ -58,7 +119,6 @@ window* Output::CreateWind(int wd, int h, int x, int y)
 void Output::CreateStatusBar()
 {
 	pWind->DrawLine(0, UI.height-UI.StBrWdth, UI.width, UI.height-UI.StBrWdth);
-
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 //Draws the Design Menu

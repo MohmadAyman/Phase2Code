@@ -164,6 +164,8 @@
     <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
     <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
     <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
+    <ClCompile Include="Copy.cpp" />
+    <ClCompile Include="Cut.cpp" />
     <ClCompile Include="Delete.cpp" />
     <ClCompile Include="Edit.cpp" />
     <ClCompile Include="GUI\Input.cpp" />
@@ -200,6 +202,8 @@
     <ClInclude Include="CMUgraphicsLib\mousequeue.h" />
     <ClInclude Include="CMUgraphicsLib\version.h" />
     <ClInclude Include="CMUgraphicsLib\windowinput.h" />
+    <ClInclude Include="Copy.h" />
+    <ClInclude Include="Cut.h" />
     <ClInclude Include="DEFS.h" />
     <ClInclude Include="Delete.h" />
     <ClInclude Include="Edit.h" />

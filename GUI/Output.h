@@ -15,7 +15,7 @@ public:
 	void ClearToolBar();
 	void CreateDesignToolBar();	//Tool bar of the design mode
 	void CreateSimulationToolBar();//Tool bar of the simulation mode
-
+	void Dragging(Point);
 	void CreateStatusBar();
 
 	Input* CreateInput(); //creates a pointer to the Input object	

@@ -22,13 +22,13 @@ private:
 	
 public:
 	SmplAssign(Point Lcorner, string LeftHS="", double RightHS=0);
+	SmplAssign::SmplAssign(Point Lcorner, SmplAssign&);
 	void Edit(Input*pIn, Output*pOut);
 	void setLHS(const string &L);
 	void setRHS(double R);
 	bool Within(Point) const;
 	virtual void Draw(Output* pOut) const;
 	void Move();
-
 	void SmplAssign::Delete();
 
 };

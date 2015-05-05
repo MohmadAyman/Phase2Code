@@ -3,6 +3,7 @@
 #include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\input.h"
 #include "C:\Users\MohmadAyman\Documents\CMP103 Project S2015 - ALL Docs - student\Project Framework\GUI\Output.h"
 #include <sstream>
+#include "SmplAssign.h"
 using namespace std;
 
 //constructor: set the ApplicationManager pointer inside this action
@@ -25,16 +26,13 @@ void Move::Execute()
 	//Calculating left corner of assignement statement block
 	Input *pIn = pManager->GetInput();
 	Output *pOut = pManager->GetOutput();
+	Statement *s;
+	s=pManager->GetSelectedStatement();
 	pIn->GetPointClicked(Position);
-	while (buttonstate() == 1)
+	Point p = Position;
+	if (s != nullptr)
 	{
-		Statement *s;
-		Statement *sel;
-		s=pManager->GetSelectedStatement();
-		sel = s;
-		
-		pManager->DeleteStatement(s);
-		sel->Draw(pOut);
+		pOut->Dragging(Position);
 	}
 }
 Move::~Move()

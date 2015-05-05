@@ -20,7 +20,23 @@ SmplAssign::SmplAssign(Point Lcorner, string LeftHS, double RightHS)
 	Outlet.x = Inlet.x;
 	Outlet.y = LeftCorner.y + UI.ASSGN_HI;	
 }
+SmplAssign::SmplAssign(Point Lcorner, SmplAssign & s)
+{
+	LHS = s.LHS;
+	RHS = s.RHS;
 
+	UpdateStatementText();
+
+	LeftCorner = Lcorner;
+
+	pConn = NULL;	//No connectors yet
+
+	Inlet.x = LeftCorner.x + UI.ASSGN_WDTH / 2;
+	Inlet.y = LeftCorner.y;
+
+	Outlet.x = Inlet.x;
+	Outlet.y = LeftCorner.y + UI.ASSGN_HI;
+}
 void SmplAssign::setLHS(const string &L)
 {
 	LHS = L;

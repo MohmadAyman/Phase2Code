@@ -5,6 +5,12 @@ Statement::Statement()
 	Text = "";
 	Selected = false;		
 }
+Statement::Statement(const Statement & s)
+{
+	Text = "";
+	Selected = false;
+}
+
 
 void Statement::SetSelected(bool s)
 {	Selected = s; }

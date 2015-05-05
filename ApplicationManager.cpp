@@ -3,9 +3,11 @@
 #include "GUI\Input.h"
 #include "GUI\Output.h"
 #include "Actions\Select.h"
+#include "Move.h"
 #include "Delete.h"
 #include "Edit.h"
 #include "MultiSelect.h"
+
 //Constructor
 ApplicationManager::ApplicationManager()
 {
@@ -67,6 +69,9 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		case DEL:
 			///create Exit Action here
 			pAct = new Delete(this);
+			break;
+		case MOVE:
+			pAct = new Move(this);
 			break;
 		
 		case STATUS:

@@ -21,6 +21,7 @@ protected:
 
 public:
 	Statement();
+	Statement::Statement(const Statement & s);
 	void SetSelected(bool s);
 	bool IsSelected() const;
 	virtual void Draw(Output* pOut) const  = 0 ;	//Draw the statement
