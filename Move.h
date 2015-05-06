@@ -9,6 +9,8 @@ public:
 	~Move();
 	void Move::ReadActionParameters();
 	void Move::Execute();
+	virtual void Move::ExecuteCopy(const Statement &);
+
 };
 //test
 ///testtt

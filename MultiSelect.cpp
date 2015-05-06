@@ -42,3 +42,6 @@ void MultiSelect::Execute() {
 			}
 		} while (pIn->GetUserAction() != MULTI_SELECT);
 }
+void MultiSelect::ExecuteCopy(const Statement &) {
+
+}

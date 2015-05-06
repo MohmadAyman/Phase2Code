@@ -14,5 +14,7 @@ public:
 	~Edit();
 	void ReadActionParameters();
 	void Execute();
+	virtual void ExecuteCopy(const Statement &);
+
 };
 

@@ -4,6 +4,8 @@
 #include "GUI\Output.h"
 #include "Actions\Select.h"
 #include "Move.h"
+#include "Copy.h"
+#include "Cut.h"
 #include "Delete.h"
 #include "Edit.h"
 #include "MultiSelect.h"
@@ -29,6 +31,7 @@ ApplicationManager::ApplicationManager()
 //==================================================================================//
 //								Actions Related Functions							//
 //==================================================================================//
+
 ActionType ApplicationManager::GetUserAction() const
 {
 	//Ask the input to get the action from the user.
@@ -73,7 +76,12 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 		case MOVE:
 			pAct = new Move(this);
 			break;
-		
+		case COPY:
+			pAct = new Copy(this);
+			break;
+		case CUT:
+			pAct = new Cut(this);
+			break;
 		case STATUS:
 			return;
 	}
@@ -124,6 +132,24 @@ Statement *ApplicationManager::GetStatement(Point P) const
 	///Add your code here to search for a statement given a point P(x,y)	
 
 	return NULL;
+}
+Statement** ApplicationManager::GetAllSelectedStatements()
+{
+	for (int i = 0; i < MaxCount; i++)
+	{
+		AllSelectedStatments[i] = NULL;
+	}
+	int j = 0;
+	for (int i = 0; i<MaxCount; i++)
+	{
+		if (StatList[i]->IsSelected()==true)
+		{
+			AllSelectedStatments[j] = StatList[i];
+			j++;
+		}
+		
+	}
+	return AllSelectedStatments;
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //Returns the selected statement

@@ -6,8 +6,10 @@ class MultiSelect :
 {
 	Point Position;
 public:
-	MultiSelect(ApplicationManager *);
+	MultiSelect(ApplicationManager *	);
 	~MultiSelect();
 	void ReadActionParameters();
 	void Execute();
+	void ExecuteCopy(const Statement &);
+
 };

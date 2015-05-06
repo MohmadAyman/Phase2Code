@@ -37,3 +37,4 @@ void Move::Execute()
 }
 Move::~Move()
 {}
+void Move::ExecuteCopy(const Statement &) {}

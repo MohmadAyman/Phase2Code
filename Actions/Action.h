@@ -5,7 +5,7 @@
 class ApplicationManager; //forward class declaration
 class Input;
 class Output;
-
+#include "../Statement.h"
 #include "..\GUI\UI_Info.h"
 
 
@@ -27,6 +27,7 @@ public:
 	
 	//Execute action (code depends on action type)
 	virtual void Execute() =0;
+	virtual void ExecuteCopy(const Statement &) = 0;
 };
 
 #endif

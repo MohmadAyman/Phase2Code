@@ -9,6 +9,8 @@ public:
 	Delete(ApplicationManager*);
 	~Delete();
 	void ReadActionParameters();
+	virtual void ExecuteCopy(const Statement &);
+
 	void Execute();
 };
 

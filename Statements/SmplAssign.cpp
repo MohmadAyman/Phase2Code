@@ -3,6 +3,7 @@
 
 using namespace std;
 
+SmplAssign::SmplAssign() {}
 SmplAssign::SmplAssign(Point Lcorner, string LeftHS, double RightHS)
 {
 	LHS = LeftHS;
@@ -20,7 +21,18 @@ SmplAssign::SmplAssign(Point Lcorner, string LeftHS, double RightHS)
 	Outlet.x = Inlet.x;
 	Outlet.y = LeftCorner.y + UI.ASSGN_HI;	
 }
-SmplAssign::SmplAssign(Point Lcorner, SmplAssign & s)
+SmplAssign& SmplAssign::operator=(const SmplAssign& copy) {
+	this->ID = copy.ID;
+	this->Inlet = copy.Inlet;
+	this->LeftCorner = copy.LeftCorner;
+	this->LHS = copy.LHS;
+	this->Outlet = copy.Outlet;
+	this->pConn = NULL;
+	this->RHS = copy.RHS;
+	this->Selected = copy.Selected;
+	return *this;
+}
+SmplAssign::SmplAssign(Point Lcorner,const SmplAssign & s)
 {
 	LHS = s.LHS;
 	RHS = s.RHS;
@@ -82,9 +94,6 @@ void SmplAssign::Move() {
 		double d = RHS;
 		
 	}
-}
-void SmplAssign::Delete() {
-	
 }
 void SmplAssign::Edit(Input*pIn, Output*pOut)
 {

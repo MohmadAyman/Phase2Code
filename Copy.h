@@ -3,10 +3,13 @@
 class Copy :
 	public Action
 {
+	
+	Point Position;
 public:
 	Copy(ApplicationManager*);
 	~Copy();
 	void ReadActionParameters();
 	void Execute();
+	void ExecuteCopy(const Statement &);
 };
 

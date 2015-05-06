@@ -1,10 +1,10 @@
 #ifndef STATEMENT_H
 #define STATEMENT_H
 
-#include "..\defs.h"
+#include "defs.h"
 #include "Connector.h"
 //class Output;
-#include "..\GUI\Output.h"
+#include "GUI\Output.h"
 
 //Base class for all Statements
 class Statement

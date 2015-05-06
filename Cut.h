@@ -3,10 +3,12 @@
 class Cut :
 	public Action
 {
+	Point Position;
 public:
 	Cut(ApplicationManager*);
 	~Cut();
 	void ReadActionParameters();
 	void Execute();
+    void ExecuteCopy(const Statement &);
 };
 

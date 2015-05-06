@@ -20,12 +20,13 @@ private:
 	Connector* ConnList[MaxCount];	//List of all connectors (Array of pointers)
 	Statement *pSelectedStat; //a pointer to the last selected statement
 	//Pointers to Input and Output classes
+	Statement* AllSelectedStatments[MaxCount];
 	Input *pIn;
 	Output *pOut;
 public:
 	ApplicationManager();
 	~ApplicationManager();
-
+	Statement** GetAllSelectedStatements();  //Home made Function
 	// -- Actions Related Functions
 	//Reads the input command from the user and returns the corresponding action type
 	ActionType GetUserAction() const;

@@ -44,3 +44,4 @@ void Select::Execute()
 		}
 	}
 }
+void Select::ExecuteCopy(const Statement &) {}

@@ -39,3 +39,4 @@ void Connector::Draw(Output* pOut) const
 	///TODO: Call output to draw a connector from SrcStat to DstStat on the output window
 }
 
+void Connector::Edit() {}

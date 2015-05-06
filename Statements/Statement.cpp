@@ -7,8 +7,8 @@ Statement::Statement()
 }
 Statement::Statement(const Statement & s)
 {
-	Text = "";
-	Selected = false;
+	this->Selected = s.Selected;
+	this->Text = s.Text;
 }
 
 

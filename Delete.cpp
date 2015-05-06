@@ -25,3 +25,4 @@ void Delete::Execute()
 		pOut->ClearDrawArea();
 	}
 }
+void Delete::ExecuteCopy(const Statement &) {}

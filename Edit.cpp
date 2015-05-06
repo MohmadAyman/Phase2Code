@@ -25,6 +25,7 @@ void Edit::Execute()
 	pIn->GetPointClicked(Position);
     Statement *s;
 	s=pManager->GetStatement(Position);
-	if (s!=nullptr)
-		s->Edit(pIn,pOut);
+//	if (s != nullptr)
+		
 }
+void Edit::ExecuteCopy(const Statement &) {}

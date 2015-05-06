@@ -10,7 +10,7 @@ class SmplAssign : public Statement
 private:
 	string LHS;	//Left Handside of the assignment (name of a variable)
 	double RHS;	//Right Handside (Value)
-	
+
 	Connector *pConn;	//Simple Assignment Stat. has one Connector to next statement
 
 	Point Inlet;	//A point where connections enters this statement 
@@ -22,7 +22,10 @@ private:
 	
 public:
 	SmplAssign(Point Lcorner, string LeftHS="", double RightHS=0);
-	SmplAssign::SmplAssign(Point Lcorner, SmplAssign&);
+	SmplAssign(Point Lcorner,const SmplAssign&);
+	SmplAssign(const SmplAssign & s);
+	SmplAssign& SmplAssign::operator=(const SmplAssign&);
+	SmplAssign();
 	void Edit(Input*pIn, Output*pOut);
 	void setLHS(const string &L);
 	void setRHS(double R);
@@ -30,7 +33,6 @@ public:
 	virtual void Draw(Output* pOut) const;
 	void Move();
 	void SmplAssign::Delete();
-
 };
 
 #endif
