@@ -29,6 +29,7 @@ void Cut::Execute() {
 			AddSmplAssign *pAct = NULL;
 			pAct = new AddSmplAssign(pManager);
 			pAct->ExecuteCp(*l);
+			delete pAct;
 		}
 		//	i++;
 		pManager->DeleteStatement(s);

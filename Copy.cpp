@@ -32,6 +32,7 @@ void Copy::Execute() {
 				AddSmplAssign *pAct = NULL;
 				pAct = new AddSmplAssign(pManager);
 				pAct->ExecuteCp(*l);	
+				delete pAct;
 			}
 	//	i++;
 	}
